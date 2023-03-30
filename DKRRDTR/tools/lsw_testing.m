@@ -2,7 +2,7 @@ function estimated = lsw_testing(algo, X)
 
 n = size(X,1);
 if isempty(algo.beta) || n==0
-    estimated = -ones(n,1)*inf;
+    estimated = zeros(n,1);
 else  
     estimated = X*algo.beta + ones(n,1)*algo.b0;
 end
